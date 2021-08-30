@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "ef5591ef-943c-44c5-9c5b-35f2d51ebcb0"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,6 +30,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -71,6 +76,9 @@
               "browserTarget": "client:build:production"
             },
             "development": {
+              "sslCert": "./ssl/server.crt",
+              "sslKey": "./ssl/server.key",
+              "ssl": true,
               "browserTarget": "client:build:development"
             }
           },
