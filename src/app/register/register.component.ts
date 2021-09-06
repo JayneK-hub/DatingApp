@@ -13,13 +13,13 @@ export class RegisterComponent implements OnInit {
 
   model: any = {};
 
-  constructor(private accoutnService: AccountService, private toastr: ToastrService) { }
+  constructor(private accountService: AccountService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
   register() {
-    this.accoutnService.register(this.model).subscribe(response =>{
+    this.accountService.register(this.model).subscribe(response =>{
       console.log(response);
       this.cancel();
     }, error => {
